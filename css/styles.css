@@ -11,6 +11,7 @@ Roboto 400, 500, 700, 900
   --primary-white-color: #ffffff;
   --primary-background-color: #ffffff;
   --secondary-background-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -64,24 +65,32 @@ body {
 }
 
 /* Наведения и фокус */
+
+.site-nav .link.current,
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-nav .contact:hover,
-.site-nav .contact:focus {
+.site-nav .contact:focus,
+.clients .link:hover,
+.clients .link:focus {
   color: var(--accent-text-color);
 }
 
 .teams .link:hover,
-.teams .link:focus,
+.teams .link:focus {
+  color: var(--primary-white-color);
+}
+
 .clients .link:hover,
-.clients .link:focus,
+.clients .link:focus {
+  border-color: var(--accent-text-color);
+}
+
+.teams .link:hover,
+.teams .link:focus,
 .social .link:hover,
 .social .link:focus {
   background-color: var(--accent-text-color);
-}
-
-.site-nav .link.current {
-  color: var(--accent-text-color);
 }
 
 /* Параметры контейнера */
@@ -90,7 +99,6 @@ body {
   margin: auto;
   width: 1200px;
   padding: 0 15px;
-  /* outline: 2px solid tomato; */
 }
 
 .features .container,
@@ -160,49 +168,42 @@ body {
   text-decoration: none;
 }
 
-.site-nav .item-contact:not(:last-child) {
-  margin-right: 30px;
-}
-
 .site-nav .item-contact {
+  align-items: center;
   display: flex;
 
   padding: 32px 0;
 }
 
+.site-nav .item-contact:not(:last-child) {
+  margin-right: 30px;
+}
+
 .site-nav .contact {
   display: inline-flex;
-  justify-content: center;
-
   color: var(--primary-text-color);
   text-decoration: none;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: 0.02em;
+  cursor: pointer;
 }
 
-.site-nav .post::before,
-.site-nav .tel::before {
-  content: "";
-
-  margin-right: 10px;
+.site-nav .post {
   width: 16px;
   height: 15px;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
-.site-nav .post::before {
-  background-image: url(../img/post.svg);
-}
-
-.site-nav .tel::before {
-  background-image: url(../img/tel.svg);
+.site-nav .tel {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Контент */
@@ -231,7 +232,6 @@ body {
 /* Герой */
 
 .hero {
-  /* background: rgba(47, 48, 58, 0.8); */
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
@@ -295,34 +295,6 @@ body {
   width: 270px;
 }
 
-.features .item::before {
-  display: block;
-  content: "";
-  height: 120px;
-  margin-bottom: 30px;
-
-  background-color: var(--secondary-background-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px;
-}
-
-.features .item:nth-child(1)::before {
-  background-image: url(../img/features/antena1.svg);
-}
-
-.features .item:nth-child(2)::before {
-  background-image: url(../img/features/clock1.svg);
-}
-
-.features .item:nth-child(3)::before {
-  background-image: url(../img/features/diagram1.svg);
-}
-
-.features .item:nth-child(4)::before {
-  background-image: url(../img/features/astonaut1.svg);
-}
-
 .features .title-text {
   margin-bottom: 10px;
 }
@@ -331,6 +303,23 @@ body {
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: 0.03em;
+}
+
+.features .icon {
+  width: 270px;
+  height: 120px;
+  padding: 25px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #212121;
+  border-radius: 4px;
+  background-color: var(--secondary-background-color);
+}
+
+.features .icon-item {
+  width: 70px;
+  height: 70px;
+  fill: currentColor;
 }
 
 /* Чем мы занимаемся */
@@ -398,29 +387,24 @@ body {
   margin-bottom: 24px;
 }
 
+.teams .item-link {
+  margin-right: 10px;
+}
+
 .teams .link {
-  display: block;
+  display: inline-flex;
   width: 44px;
   height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.instagram {
-  background-image: url(../img/social_links/instagram.svg);
-}
-
-.twitter {
-  background-image: url(../img/social_links/twitter.svg);
-}
-
-.facebook {
-  background-image: url(../img/social_links/facebook.svg);
-}
-
-.linkedin {
-  background-image: url(../img/social_links/linkedin.svg);
+.teams .icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 /* Постоянные клиенты */
@@ -428,6 +412,53 @@ body {
 .clients .elements {
   display: flex;
   justify-content: space-between;
+}
+
+.clients .link {
+  display: inline-flex;
+  width: 170px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-color);
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+
+.clients .client_1 {
+  width: 44px;
+  height: 49px;
+  fill: currentColor;
+}
+
+.clients .client_2 {
+  width: 40px;
+  height: 52px;
+  fill: currentColor;
+}
+
+.clients .client_3 {
+  width: 41px;
+  height: 43px;
+  fill: currentColor;
+}
+
+.clients .client_4 {
+  width: 80px;
+  height: 42px;
+  fill: currentColor;
+}
+
+.clients .client_5 {
+  width: 59px;
+  height: 47px;
+  fill: currentColor;
+}
+
+.clients .client_6 {
+  width: 89px;
+  height: 46px;
+  fill: currentColor;
 }
 
 /* Подвал */
@@ -502,31 +533,30 @@ body {
   text-transform: uppercase;
 }
 
-/* .footer .social__link {
-  background: rgba(255, 255, 255, 0.1);
-} */
-
-.social .social__link:not(:last-child) {
-  margin-right: 11px;
+.footer-social {
+  display: inline-flex;
 }
 
-.social__link .link {
-  display: block;
+.footer-social .link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
-
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-white-color);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-display: block;
-width: 44px;
-height: 44px;
-border-radius: 50%;
-background-repeat: no-repeat;
-background-position: center;
+.footer-social .icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.footer-social:not(:last-child) {
+  margin-right: 10px;
+}
 
 .footer .mailing {
   width: 570px;

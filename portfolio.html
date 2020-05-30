@@ -36,14 +36,20 @@
         </nav>
         <ul class="site-nav">
           <li class="item-contact">
-            <a href="mailto:info@devstudio.com" class="contact"
-              ><img src="./img/post.svg" alt="Почта" /> info@devstudio.com</a
-            >
+            <a href="mailto:info@devstudio.com" class="contact">
+              <svg class="post">
+                <use href="./img/sprite.svg#icon-post"></use>
+              </svg>
+              info@devstudio.com
+            </a>
           </li>
           <li class="item-contact">
-            <a href="tel:+380961111111" class="contact"
-              ><img src="./img/tel.svg" alt="Телефон" /> +38 096 111 11 11</a
-            >
+            <a href="tel:+380961111111" class="contact">
+              <svg class="tel">
+                <use href="./img/sprite.svg#icon-tel"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
@@ -103,7 +109,7 @@
                   class="link-img"
                 />
                 <div class="title">
-                  <h3 class="title-text">Постер New Orlean vs Golden Stars</h3>
+                  <h3 class="title-text">Постер New Orlean vs Golden Star</h3>
                   <p class="text">Дизайн</p>
                 </div>
                 <!-- <p class="hf-text">
@@ -246,12 +252,12 @@
     <!-- Подвал -->
     <footer class="footer">
       <div class="container">
-        <!-- Адрес -->
         <div class="elements">
           <div class="footer-address">
             <a href="./index.html" class="logo">
               <span class="accent">Web</span> Studio
             </a>
+            <!-- Адрес -->
             <address class="address">
               <b class="address-text">г. Киев, пр-т Леси Украинки, 26</b>
               <ul>
@@ -274,24 +280,32 @@
               присоединяйтесь
             </b>
             <ul class="elements">
-              <li class="link">
-                <a href="">
-                  <img src="./img/social_links/instagram.svg" alt="instagram" />
+              <li class="footer-social">
+                <a href="" class="link" aria-label="Ссылка на instagram">
+                  <svg class="icon">
+                    <use href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="link">
-                <a href="">
-                  <img src="./img/social_links/twitter.svg" alt="twitter" />
+              <li class="footer-social">
+                <a href="" class="link" aria-label="Ссылка на twitter">
+                  <svg class="icon">
+                    <use href="./img/sprite.svg#icon-twitter"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="link">
-                <a href="">
-                  <img src="./img/social_links/facebook.svg" alt="facebook" />
+              <li class="footer-social">
+                <a href="" class="link" aria-label="Ссылка на facebook">
+                  <svg class="icon">
+                    <use href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="link">
-                <a href="">
-                  <img src="./img/social_links/linkedin.svg" alt="linkedin" />
+              <li class="footer-social">
+                <a href="" class="link" aria-label="Ссылка на linkedin">
+                  <svg class="icon">
+                    <use href="./img/sprite.svg#icon-linkedin"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
