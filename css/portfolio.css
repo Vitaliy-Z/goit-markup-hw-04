@@ -74,6 +74,12 @@ body {
     0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
+.works .works--item:hover,
+.works .works--item:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
 .logo .accent,
 .site-nav .link.current,
 .site-nav .link:hover,
@@ -227,12 +233,6 @@ body {
 
 .works .item {
   width: calc((100% - 60px) / 3);
-}
-
-.works .item:hover,
-.works .item:focus {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .works .item:not(:nth-child(3n)) {
